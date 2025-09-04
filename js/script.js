@@ -11,3 +11,25 @@
 // Al primo click la lampadina si accende e nel bottone compare la scritta "Spegni"
 // Al secondo click la lampadina si spegne e nel bottone compare la scritta "Accendi"
 // E così via...
+
+
+// prende gli id degli elementi e li salva in delle variabili
+const lampadina = document.getElementById("white_lamp");
+const btn = document.getElementById("btn");
+
+// Stato iniziale: spenta
+let accesa = false;
+
+// evento click del bottone
+btn.addEventListener('click', () => {
+    // condizione per vedere se la lamapina è on o off
+    if (accesa) {
+        // cambia il file dell'immagine
+        lampadina.setAttribute("src", "img/white_lamp.png");
+        accesa = false;
+    } else {
+        // cambia il file dell'immagine
+        lampadina.setAttribute("src", "img/yellow_lamp.png");
+        accesa = true;
+    }
+});
