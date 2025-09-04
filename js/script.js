@@ -26,10 +26,14 @@ btn.addEventListener('click', () => {
     if (accesa) {
         // cambia il file dell'immagine
         lampadina.setAttribute("src", "img/white_lamp.png");
+        // cambia la scritta dentro il bottone
+        btn.textContent = "Accendi";
         accesa = false;
     } else {
         // cambia il file dell'immagine
         lampadina.setAttribute("src", "img/yellow_lamp.png");
+        // cambia la scritta dentro il bottone
+        btn.textContent = "Spegni";
         accesa = true;
     }
 });
